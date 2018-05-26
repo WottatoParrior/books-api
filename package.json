@@ -12,6 +12,7 @@
     "nodemon": "^1.17.4"
   },
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon start.js",
+    "start": "pm2 start start.js"
   }
 }
