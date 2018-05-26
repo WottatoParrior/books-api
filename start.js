@@ -7,9 +7,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 var mysql = require('mysql');
 var connection = mysql.createConnection({
-	host : '35.204.240.189',
+	host : '',
 	user: 'root',
-	password: 'uWGZ9L9vGX4n',
+	password: '',
 	database: 'test'
 });
 
