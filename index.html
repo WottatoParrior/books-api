@@ -7,16 +7,23 @@
 
 
 
-	<body>
-		<div id="data"> 
-			<input type="button" id="button" value="Search"/>
+	<body style="background-color:powderblue;">
+		<div id="data" style="margin-left: 40%">
+			<h2> Search for a book by title</h2> 
 			<input type="text" id="search" >
+			<input type="button" id="button" value="Search"/>
+			<br>
+			<br>
 		</div>
-		<div id = "place">
+		<div id = "place" style="margin-left: 40%">
 
 		</div>
-		<div id="entry">
-			<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div id="entry" style="margin-left: 40%">
+			<h2>Add a book</h2>
 			<form action="/books" method="post">
 			<br><br>
 			<input type="text" id="title" name="title" placeholder="Enter book's title" />
@@ -61,7 +68,7 @@
 					var divElem =document.getElementById('place');
 
 					if (results.length === 0){
-						divElem.innerHTML = 'no results';
+						divElem.innerHTML = 'No book found with this title';
 					}else{
 						console.log(results.length);
 						for (i=0;i<results.length;i++){
