@@ -35,9 +35,9 @@ app.post('/books',function(req,res){
     connection.query('INSERT INTO books (author,title,genre,price) VALUES (?, ?, ?, ?)', [author, title, genre, parseFloat(price)],function(error,results,fields){
 		if(error){
 			throw error;
-			alert("Could not add book, check if price is number")
+			
 		}
-		res.json("book added");
+		res.send("book added");
 		
 	});
 	
