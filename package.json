@@ -1,0 +1,17 @@
+{
+  "name": "book-server",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.4"
+  },
+  "scripts": {
+    "dev": "nodemon server.js"
+  }
+}
