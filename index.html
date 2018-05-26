@@ -58,12 +58,16 @@
       	
 					if (xhttp.readyState == XMLHttpRequest.DONE);
 					var results = JSON.parse(xhttp.responseText);
-					console.log(results.length);
 					var divElem =document.getElementById('place');
-					for (i=0;i<results.length;i++){
-						divElem.innerHTML = '<ul><li>' + results[i].author + '</li><li>' + results[i].title + '</li><li>' + results[i].genre + '</li><li>' + results[i].price + '</li></ul>';
+
+					if (results.length === 0){
+						divElem.innerHTML = 'no results'
+					}else{
+						console.log(results.length);
+						for (i=0;i<results.length;i++){
+							divElem.innerHTML = '<ul><li>' + results[i].author + '</li><li>' + results[i].title + '</li><li>' + results[i].genre + '</li><li>' + results[i].price + '</li></ul>';
+						}
 					}
-					
     		    }
     		    xhttp.send();
     	    }
