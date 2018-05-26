@@ -17,7 +17,7 @@
 		</div>
 		<div id="entry">
 			<br>
-			<form action="http://35.184.143.37:3000/books" method="post">
+			<form action="/books" method="post">
 			<br><br>
 			<input type="text" id="title" name="title" placeholder="Enter book's title" />
 			<br><br>
@@ -61,7 +61,7 @@
 					var divElem =document.getElementById('place');
 
 					if (results.length === 0){
-						divElem.innerHTML = 'no results'
+						divElem.innerHTML = 'no results';
 					}else{
 						console.log(results.length);
 						for (i=0;i<results.length;i++){

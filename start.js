@@ -33,10 +33,7 @@ app.get('/books',function(req,res){
 app.post('/books',function(req,res){
 	var { title, author, genre, price } = req.body;
     connection.query('INSERT INTO books (author,title,genre,price) VALUES (?, ?, ?, ?)', [author, title, genre, parseFloat(price)],function(error,results,fields){
-		if(error){
-			throw error;
-			
-		}
+		if(error) throw error;
 		res.send("book added");
 		
 	});
