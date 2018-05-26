@@ -14,6 +14,7 @@
   },
   "scripts": {
     "dev": "nodemon start.js",
-    "start": "pm2 start start.js"
+    "start": "pm2 start start.js",
+    "restart": "pm2 restart start.js"
   }
 }
